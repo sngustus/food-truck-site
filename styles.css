@@ -4,9 +4,19 @@ body {
 
 nav {
     background-color: hsla(0,0%,0%, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav img {
+    border-radius: 50%;
+    max-width: 48px;
+    flex: 1;
 }
 
 #nav-links {
+    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -41,10 +51,11 @@ nav a:hover {
 
 #content {
     background-color: hsla(0,0%,0%, 0.1);
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.wrapper {
+    padding: 32px 54px;
+
 }
 
 #landing-img {
@@ -77,7 +88,14 @@ nav a:hover {
 
 .section {
     min-width: 85vw;
-    margin: 32px 0;
+    margin: 32px auto;
+    max-width: 1200px;
+}
+
+.section .section-img {
+    width: 384px;
+    height: 384px;
+    margin: auto;
 }
 
 .section h1 {
@@ -97,7 +115,7 @@ nav a:hover {
 
 .event-card {
     flex: 1 0 30%;
-    height: 256px;
+    height: 384px;
 
     background-color: white;
     border-radius: 10px;
@@ -115,7 +133,7 @@ nav a:hover {
 
 .event-card .card-img {
     width: 100%;
-    height: 65%;
+    height: 75%;
     background-size: cover;
     background-position: center;
 }
@@ -147,12 +165,28 @@ nav a:hover {
     margin: 12px 0 0;
 }
 
+#testimonials-wrapper {
+    background-color: white;
+}
+
 #testimonials {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     gap: 1rem;
     margin-top: 32px;
+
+}
+
+#testimonials .arrow {
+    font-size: xx-large;
+    color:hsla(0,0%,0%, 0.75);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsla(0,0%,0%, 0.1);
+    border-radius: 50%;
+    padding: 12px;
+    border: none;
 }
 
 .testimonial {
@@ -161,6 +195,7 @@ nav a:hover {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0, 0.7);
     box-shadow: 0 5px 15px rgba(0,0,0, 0.1);
+    background-color: hsla(0,0%,0%, 0.1);
 }
 
 .testimonial .testimonial-quote {
